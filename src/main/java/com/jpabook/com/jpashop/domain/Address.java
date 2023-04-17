@@ -11,4 +11,14 @@ public class Address {
     private String city;
     private String street;
     private String zipcode;
+
+    //JPA stack 상 닫아두고, 함부로 new 하면 안되는 것을 보여줌.
+    protected Address() {
+    }
+
+    public Address(String city, String street, String zipcode) {
+        this.city = city;
+        this.street = street;
+        this.zipcode = zipcode;
+    }
 }
