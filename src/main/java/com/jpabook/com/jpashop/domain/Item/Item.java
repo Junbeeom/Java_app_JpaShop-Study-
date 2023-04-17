@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 //구현체를 가지고 작업할 것이기 때문에 추상클래스로 만듬.
 @Entity
@@ -20,5 +22,8 @@ public abstract class Item {
     private String name;
     private int price;
     private int stockQuantity;
+
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categoryies = new ArrayList<>();
 
 }
