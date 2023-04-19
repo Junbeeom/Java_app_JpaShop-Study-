@@ -24,9 +24,11 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    //order가 persist 될때 orderItems도 persist된다.
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    //order가 persist 될때 Delivery도 persist된다.
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;

@@ -10,6 +10,13 @@ import javax.persistence.*;
 @Getter @Setter
 public class OrderItem {
 
+
+    //다른 곳에서 new OerderItem 하는 것을 방지 할 수 있음.
+    //Class위에 NoArgsConstructor(access = AccessLevel.PROTECTED) 하면 생성자 방지 해줌.
+    protected OrderItem() {
+
+    }
+
     @Id
     @GeneratedValue
     @Column(name = "order_item_id")

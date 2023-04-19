@@ -1,10 +1,11 @@
 package com.jpabook.com.jpashop.repository;
 
+import com.jpabook.com.jpashop.domain.Order;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.criteria.Order;
+
 
 @Repository
 @RequiredArgsConstructor
